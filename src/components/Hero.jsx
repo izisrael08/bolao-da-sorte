@@ -86,7 +86,7 @@ export default function Hero() {
               <FaWhatsapp /> Entrar no Grupo
             </a>
             <a
-              href="https://youtube.com/SEUCANAL"
+              href="https://www.youtube.com/@BOLAODASORTE-me1he"
               target="_blank"
               rel="noopener noreferrer"
               className="youtube-btn"
