@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import img01 from "../assets/img01.jpg";
+import img01 from "../assets/img01.png";
 import img02 from "../assets/img02.jpg";
 import img03 from "../assets/img03.jpg";
 
