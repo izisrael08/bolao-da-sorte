@@ -1,0 +1,27 @@
+/* Estilos base para o aplicativo admin */
+.admin-app {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+  }
+  
+  /* Estilos para o container principal */
+  .admin-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Estilos para o conteúdo principal */
+  .admin-main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 250px; /* Largura do sidebar */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .admin-main-content {
+      margin-left: 0;
+    }
+  }
