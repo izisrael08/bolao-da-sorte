@@ -1,61 +1,40 @@
-/* Features Section */
-.features-section {
-  background-color: var(--bg-light);
-  padding: 2rem 1rem;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.feature-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 10px;
-  transition: var(--transition);
-  border: 1px solid rgba(255, 215, 0, 0.1);
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 215, 0, 0.3);
-}
-
-.feature-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-
-.feature-card p {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 /* Palpites Section */
 .palpites-section {
   padding: 2rem 1rem;
   background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
 }
 
+.palpites-section > .palpites-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Limite máximo para evitar ficar muito largo */
+}
+
+/* Título */
+.palpites-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grid Responsivo */
 .palpites-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
+/* Card */
 .palpite-card {
   background: var(--secondary);
   padding: 1.2rem;
   border-radius: 1rem;
   text-align: start;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transition: transform 0.3s ease;
 }
 
@@ -63,6 +42,7 @@
   transform: translateY(-5px);
 }
 
+/* Cabeçalho do card */
 .palpite-header {
   display: flex;
   justify-content: space-between;
@@ -85,6 +65,7 @@
   opacity: 0.9;
 }
 
+/* Conteúdo do palpite */
 .palpite-texto p {
   color: #ffffff;
   margin: 0.3rem 0;
@@ -92,15 +73,17 @@
   line-height: 1.4;
 }
 
+/* Imagem */
 .palpite-img {
   margin-top: 1rem;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 180px; /* Altura fixa para uniformidade */
   border-radius: 0.5rem;
-  object-fit: contain;
+  object-fit: cover; /* Cobre o espaço sem distorcer */
+  aspect-ratio: 4 / 3; /* Opcional: mantém proporção agradável */
 }
 
-/* Responsive Enhancements */
+/* Responsividade */
 @media (max-width: 768px) {
   .grupo-texto,
   .animal-texto {
@@ -127,5 +110,7 @@
 
   .palpite-img {
     margin-top: 0.8rem;
+    height: 160px;
   }
 }
+

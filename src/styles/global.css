@@ -357,3 +357,20 @@
   .fade-in {
     animation: fadeIn 1s ease-in;
   }
+
+/*  mensagens de erro*/
+  .error-message {
+    color: #ff4444;
+    margin: 10px 0;
+    padding: 10px;
+    background: #ffebee;
+    border-radius: 4px;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+
+  
