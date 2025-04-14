@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PalpitesAdmin from '../pages/Components/PalpitesAdmin';
 import FeaturesAdmin from '../pages/Components/FeaturesAdmin';
+import ResultadosAdmin from '../pages/Components/ResultadosAdmin';
 import '../pages/styles/Dashboard/index.css';
 
 export default function Dashboard() {
@@ -22,12 +23,13 @@ export default function Dashboard() {
                 <ul className="navbar-links">
                     <li><a href="#palpites">Gerenciar Palpites</a></li>
                     <li><a href="#features">Gerenciar Features</a></li>
+                    <li><a href="#resultados">Gerenciar Resultados</a></li>
                 </ul>
                 <div className="navbar-actions">
                     <button className="logout-btn" onClick={handleLogout}>Sair</button>
                 </div>
             </nav>
-            
+
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -41,7 +43,9 @@ export default function Dashboard() {
                 theme="colored"
             />
 
-            {window.location.hash === '#features' ? (
+            {window.location.hash === '#resultados' ? (
+                <ResultadosAdmin />
+            ) : window.location.hash === '#features' ? (
                 <FeaturesAdmin />
             ) : (
                 <PalpitesAdmin />
