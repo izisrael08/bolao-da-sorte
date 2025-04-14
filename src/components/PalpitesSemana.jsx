@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import api from '../api/api'; // Importe sua instância do axios
 import { motion } from 'framer-motion';
-import '../styles/SectionPalpites/index.css';
+import '../pages/styles/Dashboard/SectionPalpites/index.css';
 
 import img01 from '../assets/images/01.jpg';
 import img02 from '../assets/images/02.jpg';

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import '../styles/global.css';
 
 export default function ResultadosAtrasados() {
   const resultados = [
