@@ -122,8 +122,8 @@ export default function PalpitesSemana() {
                   <span className="animal-texto">{animal}</span>
                 </div>
                 <div className="palpite-texto">
-                  <p>{palpite.milhar}</p>
-                  <p>{palpite.centena}</p>
+                  <p>Milhar: {palpite.milhar}</p>
+                  <p>Centena: {palpite.centena}</p>
                 </div>
                 <img src={imgSrc} alt={animal} className="palpite-img" />
               </motion.div>
