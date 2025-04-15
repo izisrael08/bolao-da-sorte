@@ -1,0 +1,87 @@
+/* Como Participar Section */
+.como-participar-section {
+    padding: 5rem 1rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    height: 100vh;
+  }
+  
+  .como-participar-section h2 {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    position: relative;
+  }
+  
+  .como-participar-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+  
+  .passos-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .passo-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .passo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .passo-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+  }
+  
+  .passo-card h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .passo-card p {
+    color: #7f8c8d;
+    line-height: 1.6;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .como-participar-section {
+      padding: 3rem 1rem;
+    }
+    
+    .como-participar-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .passos-container {
+      gap: 1.5rem;
+    }
+    
+    .passo-card {
+      width: 100%;
+      max-width: 350px;
+      padding: 1.5rem;
+    }
+  }

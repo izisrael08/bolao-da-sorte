@@ -21,7 +21,7 @@ export default function Features() {
   return (
     <section id="features" className="features-section">
       <div className="features-wrapper">
-        <h2>Como Participar</h2>
+        <h2>Como Funciona</h2>
 
         <div className="features-intro">
           <p>

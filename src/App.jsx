@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import api from './api/api';
 import './styles/global.css';
+import ComoParticipar from './components/ComoParticipar';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <motion.div initial="hidden" animate="show">
        <Header />
       <Hero />
+      <ComoParticipar/>
       <Features />
       <PalpitesSemana />
       <ResultadosAtrasados />

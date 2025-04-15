@@ -48,6 +48,18 @@ export default function Header() {
               Início
             </Link>
           </li>
+
+          <li>
+            <Link
+              to="como-participar"
+              smooth={true}
+              duration={500}
+              onClick={handleLinkClick}
+            >
+              Como Participar
+            </Link>
+          </li>
+
           <li>
             <Link
               to="features"
