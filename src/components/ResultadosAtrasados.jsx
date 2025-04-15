@@ -28,7 +28,7 @@ export default function ResultadosAtrasados() {
 
   if (isLoading) {
     return (
-      <motion.section 
+      <motion.section
         className="resultados-container"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -44,7 +44,7 @@ export default function ResultadosAtrasados() {
 
   if (error) {
     return (
-      <motion.section 
+      <motion.section
         className="resultados-container"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -58,7 +58,8 @@ export default function ResultadosAtrasados() {
   }
 
   return (
-    <motion.section 
+    <motion.section
+      id="resultados"  // ← Este deve bater com o Link
       className="resultados-container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -77,7 +78,7 @@ export default function ResultadosAtrasados() {
         ) : (
           <div className="resultados-grid">
             {resultados.map((resultado) => (
-              <motion.div 
+              <motion.div
                 key={resultado._id}
                 className="resultado-card"
                 whileHover={{ y: -5, boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}

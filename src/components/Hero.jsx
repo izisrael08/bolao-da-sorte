@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import img01 from "../assets/img01.jpg";
 import img02 from "../assets/img02.jpg";
 import img03 from "../assets/img03.jpg";
-
+import '../styles/hero.css';
 const slides = [
   {
     image: img01,

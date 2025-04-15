@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import '../styles/header.css';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Controla o overflow do body quando o menu está aberto
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -13,20 +12,21 @@ export default function Header() {
       document.body.style.overflow = "auto";
     }
 
-    // Limpeza do efeito
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [isMenuOpen]);
 
-  // Fecha o menu ao clicar em um link
   const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
 
   return (
     <header className="header">
-      <div className="logo">Bolão da Sorte</div>
+      <div className="logo">
+        <h1>Bolão da Sorte</h1>
+        <p>Os melhores palpites do Jogo do Bicho!</p>
+      </div>
 
       <button
         className="menu-btn"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import api from '../api/api'; // importa seu axios configurado
+import'../styles/contact.css';
 
 export default function Contact() {
   const [contato, setContato] = useState(null);

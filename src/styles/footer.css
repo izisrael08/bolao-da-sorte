@@ -1,0 +1,61 @@
+/* Footer - Tema Claro */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+  }
+  
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #e74c3c);
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Adicione estas classes se quiser incluir ícones ou links sociais */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #f1c40f;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 1.5rem 1rem;
+    }
+    
+    .footer p {
+      font-size: 0.9rem;
+    }
+    
+    .footer-links {
+      gap: 1rem;
+    }
+    
+    .footer-link {
+      font-size: 1.2rem;
+    }
+  }

@@ -1,138 +1,126 @@
-/* Features Section */
+/* Features Section - Tema Claro */
 .features-section {
+  padding: 5rem 1rem;
+  background-color: #ebebeb;
+  color: #2c3e50;
+}
+
+.features-wrapper {
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.features-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.features-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.feature-content p {
+  color: #34495e;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.features-intro {
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+
+.features-intro p {
+  margin-bottom: 0.8rem; /* Menos espaço entre parágrafos */
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .features-section {
     padding: 3rem 1rem;
-    background-color: var(--bg-dark);
-    display: flex;
-    justify-content: center;
   }
   
-  .features-section > .features-wrapper {
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  /* Título */
   .features-section h2 {
-    color: #fff;
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
   }
   
-  .features-section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--primary);
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-  }
-  
-  /* Grid Responsivo */
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
-  /* Card */
   .feature-card {
-    background: var(--secondary);
-    padding: 1.8rem 1.5rem;
-    border-radius: 1rem;
-    text-align: start;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  }
-  
-  .feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--primary);
-  }
-  
-  /* Cabeçalho do card */
-  .feature-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  .feature-order {
-    background: var(--primary);
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1rem;
-    flex-shrink: 0;
+    padding: 1.5rem;
   }
   
   .feature-card h3 {
-    color: #ffffff;
-    font-size: 1.4rem;
-    margin: 0;
+    font-size: 1.2rem;
   }
-  
-  /* Conteúdo do feature */
-  .feature-content p {
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .features-section {
-      padding: 2rem 1rem;
-    }
-    
-    .features-section h2 {
-      font-size: 1.8rem;
-    }
-    
-    .feature-card {
-      padding: 1.5rem 1.2rem;
-    }
-    
-    .feature-card h3 {
-      font-size: 1.3rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .features-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    
-    .feature-header {
-      gap: 0.8rem;
-      margin-bottom: 1rem;
-    }
-    
-    .feature-content p {
-      font-size: 0.95rem;
-    }
-  }
+}
+

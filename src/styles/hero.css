@@ -1,0 +1,164 @@
+/* Hero Section - Tema Claro */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    max-height: 800px;
+    overflow: hidden;
+    color: #2c3e50; /* Cor do texto principal */
+  }
+  
+  /* Carrossel */
+  .carrossel-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 137px;
+  }
+  
+  .carrossel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carrossel-slide.active {
+    opacity: 1;
+  }
+  a{
+    cursor: pointer;
+  }
+  
+  /* Overlay para melhor legibilidade */
+  .carrossel-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.726); /* Overlay claro */
+  }
+  
+  /* Container do conteúdo */
+  .hero-content-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #34495e;
+    line-height: 1.6;
+  }
+  
+  /* Botões */
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .whatsapp-btn, .youtube-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+  }
+  
+  .youtube-btn {
+    background-color: #FF0000;
+    color: white;
+  }
+  
+  .youtube-btn:hover {
+    background-color: #CC0000;
+    transform: translateY(-3px);
+  }
+  
+  /* Indicadores do carrossel */
+  .carrossel-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.637);
+    border: 2px solid #acacac00;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: #25D366;;
+    transform: scale(1.2);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 1.5rem;
+    }
+    
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .whatsapp-btn, .youtube-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }

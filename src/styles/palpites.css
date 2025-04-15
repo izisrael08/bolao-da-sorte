@@ -1,0 +1,143 @@
+/* Palpites Section - Tema Claro */
+.palpites-section {
+  padding: 5rem 1rem;
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+.palpites-wrapper {
+  max-width: 1200px;
+  margin: 120px auto;
+}
+
+.palpites-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.palpites-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #3498db;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.no-palpite {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.palpites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.palpite-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.palpite-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3498db, #2c3e50);
+}
+
+.palpite-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #ecf0f1;
+}
+
+.grupo-texto {
+  font-weight: bold;
+  color: #3498db;
+  font-size: 1.1rem;
+}
+
+.animal-texto {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.palpite-texto {
+  margin: 1rem 0;
+}
+
+.palpite-texto p {
+  margin: 0.5rem 0;
+  color: #34495e;
+  line-height: 1.5;
+}
+
+.palpite-texto p:first-child {
+  font-weight: bold;
+}
+
+.palpite-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: auto;
+  border: 1px solid #ecf0f1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .palpites-section {
+    padding: 3rem 1rem;
+  }
+  
+  .palpites-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .palpites-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .palpite-card {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .palpite-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,132 @@
+/* Contact Section - Tema Claro */
+.contact-section {
+    padding: 5rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .contact-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .whatsapp-btn, .youtube-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    justify-content: center;
+  }
+  
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    border: 2px solid #25D366;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: white;
+    color: #25D366;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.2);
+  }
+  
+  .youtube-btn {
+    background-color: #FF0000;
+    color: white;
+    border: 2px solid #FF0000;
+  }
+  
+  .youtube-btn:hover {
+    background-color: white;
+    color: #FF0000;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 0, 0, 0.2);
+  }
+  
+  /* Efeito de loading */
+  .contact-section.loading .contact-buttons a {
+    position: relative;
+    color: transparent;
+  }
+  
+  .contact-section.loading .contact-buttons a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 3rem 1rem;
+    }
+    
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-buttons {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .whatsapp-btn, .youtube-btn {
+      width: 100%;
+      padding: 0.8rem 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-section h2 {
+      font-size: 1.8rem;
+    }
+    
+    .whatsapp-btn, .youtube-btn {
+      font-size: 1rem;
+      min-width: auto;
+    }
+  }
